@@ -13,7 +13,7 @@
                                   --accent-color: #d9534f;
                                         --gold-color: #f0ad4e;
                                             }
-                                                body {
+                                                bo٨dy {
                                                       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                                                             background-color: var(--bg-color);
                                                                   color: var(--text-color);
@@ -151,4 +151,3 @@
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </body>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

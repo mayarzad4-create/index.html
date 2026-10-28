@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مأساة أحمد ومريم: قهر على قهر</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg-color: #1a1a1a;
+      --card-bg: #2a2a2a;
+      --text-color: #e0e0e0;
+      --accent-color: #d9534f;
+      --gold-color: #f0ad4e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: var(--accent-color);
+      text-align: center;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .nav-btn {
+      padding: 8px 16px;
+      border: 1px solid #555;
+      border-radius: 4px;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active {
+      background: var(--accent-color);
+    }
+
+    .nav-btn:focus-visible,
+    .whisper-toggle:focus-visible {
+      outline: 3px solid var(--gold-color);
+      outline-offset: 3px;
+    }
+
+    .station {
+      padding: 25px;
+      border-radius: 8px;
+      background: var(--card-bg);
+      box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
+    }
+
+    .station[hidden],
+    .whisper-content[hidden] {
+      display: none;
+    }
+
+    .whisper-box {
+      margin: 15px 0;
+      padding: 15px;
+      border-right: 4px solid var(--accent-color);
+      border-radius: 4px;
+      background: #382b2b;
+    }
+
+    .whisper-toggle {
+      padding: 0;
+      border: 0;
+      background: none;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      text-align: right;
+    }
+
+    .whisper-content {
+      margin-top: 10px;
+      color: var(--gold-color);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+      }
+
+      .station {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>مأساة أحمد ومريم: قهر على قهر</h1>
+
+    <nav class="nav-buttons" aria-label="محطات القصة">
+      <button class="nav-btn active" type="button" aria-controls="station-1" aria-pressed="true" data-station="1">1. التأسيس</button>
+      <button class="nav-btn" type="button" aria-controls="station-2" aria-pressed="false" data-station="2">2. الفراق</button>
+      <button class="nav-btn" type="button" aria-controls="station-3" aria-pressed="false" data-station="3">3. الشك</button>
+      <button class="nav-btn" type="button" aria-controls="station-4" aria-pressed="false" data-station="4">4. الزواج الأخوي</button>
+      <button class="nav-btn" type="button" aria-controls="station-5" aria-pressed="false" data-station="5">5. الليلة الأخيرة</button>
+      <button class="nav-btn" type="button" aria-controls="station-6" aria-pressed="false" data-station="6">6. مرآة رقية</button>
+    </nav>
+
+    <section id="station-1" class="station" aria-labelledby="heading-1">
+      <h2 id="heading-1">المحطة الأولى: الحب الأول وتأسيس الحلم</h2>
+      <p>مريم خطفت انتباه أحمد بنظرة واحدة غيرت مجرى تفكيره... وكان تاريخ 2 تشرين الثاني (2/11) يمثل محطة مقدسة ومكررة في دفاتره...</p>
+      <p>أربع سنين وأحمد عم يعمر بهالبيت.. مو بس حيطان وسقف، كان عم يعمر حلم. كان يقول لنفسه بكل لحظة تعب "كرمال مريم كل شي بيهون".</p>
+    </section>
+
+    <section id="station-2" class="station" aria-labelledby="heading-2" hidden>
+      <h2 id="heading-2">المحطة الثانية: الزواج والتراكمات</h2>
+      <p>ولما اجتمعوا أخيراً تحت سقف واحد، بدت الحياة كأنها عم تعتذر له عن كل الشقا. أول ستة أشهر كانت مثل الحلم...</p>
+    </section>
+
+    <section id="station-3" class="station" aria-labelledby="heading-3" hidden>
+      <h2 id="heading-3">المحطة الثالثة: 15 يوماً من الهمسات والشك</h2>
+      <p>خمسة عشر يوماً قضتها مريم بعيدة عن بيتها.. وهنيك كانت تتسلل لقلبها كلمات غريبة...</p>
+
+      <div class="whisper-box">
+        <button class="whisper-toggle" type="button" aria-controls="whisper-text" aria-expanded="false">
+          💬 <strong>همسات الشك المسمومة (انقر للتأمل والتكشيف)</strong>
+        </button>
+        <div id="whisper-text" class="whisper-content" hidden>
+          <ul>
+            <li>"اللي بيحبك ما بيتركك تروحي زعلانة.. شفتي كيف ما فارقة معه؟"</li>
+            <li>"إذا أجا وجابلك هدية، لا تفكريها حب.. هاد عم يشتري سكوتك ليرجع يطنشك!"</li>
+            <li>"الزلمة اللي بيسكت وقت المشكلة هاد عم يستخف بعقلك وما شايفك شي".</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="station-4" class="station" aria-labelledby="heading-4" hidden>
+      <h2 id="heading-4">المحطة الرابعة: الزواج الأخوي</h2>
+      <p>تفاصيل هذه المحطة لم تُضف بعد.</p>
+    </section>
+
+    <section id="station-5" class="station" aria-labelledby="heading-5" hidden>
+      <h2 id="heading-5">المحطة الخامسة: الليلة الأخيرة</h2>
+      <p>تفاصيل هذه المحطة لم تُضف بعد.</p>
+    </section>
+
+    <section id="station-6" class="station" aria-labelledby="heading-6" hidden>
+      <h2 id="heading-6">المحطة السادسة: مرآة رقية</h2>
+      <p>تفاصيل هذه المحطة لم تُضف بعد.</p>
+    </section>
+  </main>
+
+  <script>
+    const stationButtons = document.querySelectorAll(".nav-btn");
+    const stations = document.querySelectorAll(".station");
+    const whisperToggle = document.querySelector(".whisper-toggle");
+    const whisperContent = document.getElementById("whisper-text");
+
+    stationButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedStation = button.dataset.station;
+
+        stations.forEach((station) => {
+          station.hidden = station.id !== `station-${selectedStation}`;
+        });
+
+        stationButtons.forEach((stationButton) => {
+          const isActive = stationButton === button;
+          stationButton.classList.toggle("active", isActive);
+          stationButton.setAttribute("aria-pressed", String(isActive));
+        });
+      });
+    });
+
+    whisperToggle.addEventListener("click", () => {
+      const isExpanded = whisperToggle.getAttribute("aria-expanded") === "true";
+      whisperToggle.setAttribute("aria-expanded", String(!isExpanded));
+      whisperContent.hidden = isExpanded;
+    });
+  </script>
+</body>
+</html>
